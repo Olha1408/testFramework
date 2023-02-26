@@ -1,5 +1,5 @@
 https://phptravels.net/api/admin
 
- emailField = .//input[@type="text" ]
-passwordField =  .//input[@type="password" ]
+ emailField = .//input[@placeholder='Email']
+passwordField =  .//input[@type='password' ]
 buttonLogin = .//button[@type='submit']
