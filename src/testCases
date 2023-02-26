@@ -1,0 +1,111 @@
+https://phptravels.net/
+
+
+TC0 - Create a new user via Backoffice Super Admin:
+    pre-cond
+        go to https://phptravels.net/admin
+        enter email "admin@phptravels.com" in email field
+        enter password "demoadmin"  in password field
+        click on button LOGIN
+
+Steps To Reproduce
+1) on Dashboard Menu navigate to 'Accounts'
+2) go to 'Accounts'
+3) go to 'Customer'
+4) Click on button "Add"
+5) enter First Name   'tester '
+6) enter Second name  'booster'
+7) enter email  'fakemail@net.com'
+8) enter password "!123qwerty"
+9) enter Mobile Number  '09876557'
+10) select Country 'Ukraine'
+11) Address 1  '9 street apple'
+12) Address 2  '234'
+13) click on button " Update Settings"
+
+    EXPECTED:
+        -user is on page https://phptravels.net/api/admin/accounts/customers/add
+        - filled information form
+        - new user created and appeared on the tablePage  https://phptravels.net/api/admin/accounts/customers/
+
+----------------------------------------------------------------------------------------------
+TC1 - Login via Customer Account
+
+    pre-condition
+        go to https://phptravels.net/admin
+        enter email "admin@phptravels.com" in email field
+        enter password "demoadmin"  in password field
+        click button LOGIN
+
+       on Dashboard Menu navigate go to 'Accounts'
+        go to 'Customer'
+        Click on button "Add"
+        enter First Name   'tester '
+        enter Second name  'booster'
+        enter email  'fakemail@net.com'
+        enter password "!123qwerty"
+        enter Mobile Number  '09876557'
+        select Country 'Ukraine'
+        Address 1  '9 street apple'
+        Address 2  '234'
+        click on button " Update Settings"
+
+Steps To Reproduce
+1) go to https://phptravels.net/loginTest
+2) enter email  'fakemail@net.com'
+3) enter password "!123qwerty"
+4) click on "Login" button
+
+
+    EXPECTED:
+        - current user is logged
+        - user sees dashboard page, left menu w his name
+
+
+----------------------------------------------------------------------------------------------
+
+TC2 - Add new PickUP location for cars  via Backoffice Super Admin:
+
+    pre-cond
+        go to https://phptravels.net/admin
+        enter email "admin@phptravels.com" in email field
+        enter password "demoadmin"  in password field
+        click on button LOGIN
+
+Steps To Reproduce
+1) open left Menu
+2) click on item "Cars"
+3) choose "Locations"  , https://phptravels.net/api/admin/locations
+4) click on button "Add"
+5) select country "Australia"
+6) enter Location / City "Moe"
+7) enter Long 55'
+8) enter Late 43'
+
+
+
+    EXPECTED:
+        -
+
+----------------------------------------------------------------------------------------------
+
+TC3 - Edit location for cars  via Backoffice Super Admin:
+
+    pre-cond
+        go to https://phptravels.net/admin
+        enter email "admin@phptravels.com" in email field
+        enter password "demoadmin"  in password field
+        click on button LOGIN
+
+Steps To Reproduce
+1) open left Menu
+2) click on item "Cars"
+3) choose "Locations"  , https://phptravels.net/api/admin/locations
+4) click on button "Edit"
+5) select status to "Disable"
+8) click on button "Submit"
+
+
+    EXPECTED:
+        -location status changed
+
