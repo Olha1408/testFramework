@@ -28,7 +28,8 @@ public class LoginPage extends ParentAllPages {
 
     public void openLoginPage() {
         try {
-            webDriver.get("https://phptravels.net/login");
+            //webDriver.get("https://phptravels.net/login");
+            webDriver.get("https://phptravels.net/admin");
             logger.info("Login page is opened");
         } catch (Exception e) {
             logger.error("Cannot open Login page" + e);
@@ -51,5 +52,9 @@ public class LoginPage extends ParentAllPages {
 
     public void clickOnLoginButton() {
         clickOnElement(buttonLogin);
+    }
+    public boolean isButtonSignInDisplayed() {
+
+        return isElementDisplayed(buttonLogin);
     }
 }

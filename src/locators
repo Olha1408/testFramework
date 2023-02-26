@@ -3,3 +3,6 @@ https://phptravels.net/api/admin
  emailField = .//input[@placeholder='Email']
 passwordField =  .//input[@type='password' ]
 buttonLogin = .//button[@type='submit']
+
+
+buttonLogout = .//a[@href='https://phptravels.net/account/logout']   // not unique on page

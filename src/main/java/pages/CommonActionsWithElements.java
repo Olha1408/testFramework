@@ -43,6 +43,23 @@ public class CommonActionsWithElements {
             printErrorAndStopTest(e);
         }
     }
+    protected boolean isElementDisplayed(WebElement webElement) {
+
+        try {
+            boolean state = webElement.isDisplayed();
+            String message;
+            if (state) {
+                message = getElementName(webElement) + " Element is Displayed";
+            } else {
+                message = getElementName(webElement) + " Element is not Displayed";
+            }
+            logger.info(message);
+            return state;
+        } catch (Exception e) {
+            logger.info("Element is not displayed");
+            return false;
+        }
+    }
     protected void clickOnElement(WebElement webElement) {
         try {
             webDriverWait10.until(ExpectedConditions.elementToBeClickable(webElement));
